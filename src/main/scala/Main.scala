@@ -1,3 +1,5 @@
+//import Main.resultSet
+
 import java.sql._
 
 object Main extends App {
@@ -9,16 +11,50 @@ object Main extends App {
     con = DriverManager.getConnection(connectionString, "", "")
 
     val statement = con.createStatement()
-    var resultSet = statement.executeQuery("select * from pokes")
+    var resultSet = statement.executeQuery("select * from geoeditors order by upper_bound desc limit 20")
 
-    while (resultSet.next) {
-      val foo = resultSet.getInt("foo")
-      val bar = resultSet.getString("bar")
-      println(foo + " " + bar)
-    }
+//    while (resultSet.next) {
+//      val foo = resultSet.getString("wiki_db")
+//      val bar = resultSet.getString("country")
+//      val bar = resultSet.getString("country")
+//      val bar = resultSet.getString("country")
+//      val bar = resultSet.getString("country")
+//      println(foo + " " + bar)
+//    }
+
+    printResultSet(resultSet)
   } catch {
     case e: Exception => e.printStackTrace()
   }
+
+  def printResultSet(resultSet: ResultSet): Unit = {
+    val rsmd = resultSet.getMetaData
+    val columnsNumber = rsmd.getColumnCount
+    while (resultSet.next) {
+      for (i <- 1 to columnsNumber) {
+        if (i > 1) System.out.print(",  ")
+        val columnValue = resultSet.getString(i)
+        System.out.print(columnValue + " " + rsmd.getColumnName(i))
+      }
+      System.out.println("")
+    }
+  }
+
+  import java.sql.ResultSetMetaData
+
+//  val resultSet = statement.executeQuery("SELECT * from foo")
+//  val rsmd = resultSet.getMetaData
+//  val columnsNumber = rsmd.getColumnCount
+//  while ( {
+//    resultSet.next
+//  }) {
+//    for (i <- 1 to columnsNumber) {
+//      if (i > 1) System.out.print(",  ")
+//      val columnValue = resultSet.getString(i)
+//      System.out.print(columnValue + " " + rsmd.getColumnName(i))
+//    }
+//    System.out.println("")
+//  }
 
   con.close();
 }
