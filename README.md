@@ -14,7 +14,7 @@
 >sbt compile
 
 ## Setup docker-hive
--First, clone docker-hive repo locally
+- First, clone docker-hive repo locally
 >cd docker-hive \
 >docker-compose up -d
 
