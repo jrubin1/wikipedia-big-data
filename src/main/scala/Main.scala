@@ -1,5 +1,3 @@
-//import Main.resultSet
-
 import java.sql._
 
 object Main extends App {
@@ -50,7 +48,6 @@ object Main extends App {
   }
 
   def printResultSet(resultSet: ResultSet): Unit = {
-    //https://stackoverflow.com/questions/24229442/print-the-data-in-resultset-along-with-column-names
     val rsmd = resultSet.getMetaData
     val columnsNumber = rsmd.getColumnCount
     while (resultSet.next) {
