@@ -1,5 +1,13 @@
 # Wikipedia Big Data Analysis
-## Data Manipulation/Analysis using Hive
+## Technologies
+- Hive
+- JDBC
+- Scala
+- sbt
+- HDFS
+- Yarn
+
+## Features
 - Wikipedia Analytics Dataset - pageviews and geoeditors data
 - Data processing/analysis using Hive on Wikipedia Pageview data and Geoeditor data
 - Focused analysis on Country (country field)/Language (wiki_db field) of page edits and page views
@@ -13,7 +21,7 @@
 
 ## Requirements
 - JDK Version 8 or 11
-- Scala and SBT
+- Scala and sbt
 - docker-hive (Big Data Europe)
 
 ## Setup docker-hive
