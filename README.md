@@ -1,5 +1,5 @@
 # Josh's Project 1
-##Data Manipulation/Analysis using Hive
+## Data Manipulation/Analysis using Hive
 - Wikipedia Analytics Dataset - pageviews and geoeditors data
 - 11 hive queries providing various insights about pageview data and geoeditor data
 - Scala connection to Hive through JDBC
@@ -14,7 +14,7 @@
 >sbt compile
 
 ## Setup docker-hive
--First, clone docker-hive repo locally
+- First, clone docker-hive repo locally
 >cd docker-hive \
 >docker-compose up -d
 
