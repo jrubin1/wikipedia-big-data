@@ -1,22 +1,35 @@
-# Josh's Project 1
+# Wikipedia Big Data Analysis
 ## Data Manipulation/Analysis using Hive
 - Wikipedia Analytics Dataset - pageviews and geoeditors data
-- 11 hive queries providing various insights about pageview data and geoeditor data
+- Data processing/analysis using Hive on Wikipedia Pageview data and Geoeditor data
+- Focused analysis on Country (country field)/Language (wiki_db field) of page edits and page views
 - Scala connection to Hive through JDBC
 - Queries executed and output by Scala
+- CLI allowing user to either execute select query of choice or execute all queries
+
+## Datasets
+- https://dumps.wikimedia.org/other/pageviews/readme.html
+- https://dumps.wikimedia.org/other/geoeditors/readme.html
 
 ## Requirements
 - JDK Version 8 or 11
 - Scala and SBT
-- docker-hive (big data Europe)
-
-## Compile
->sbt compile
+- docker-hive (Big Data Europe)
 
 ## Setup docker-hive
 - First, clone docker-hive repo locally
 >cd docker-hive \
 >docker-compose up -d
+
+## Instructions
+1. Set up docker-hive
+2. Load data into HDFS (can use curl to retrieve data if desired)
+3. Create Hive tables with schema according to pageviews and geoeditors data format
+4. Load data from HDFS into Hive
+5. Run Scala program to execute analysis. On prompt, select desired analysis
+
+## Compile
+>sbt compile
 
 ## Run
 >sbt run
