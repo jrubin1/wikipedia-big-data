@@ -123,4 +123,6 @@ project/plugins/project/
 *.class
 *.log
 
+.idea
+
 # End of https://www.toptal.com/developers/gitignore/api/scala,sbt,intellij
