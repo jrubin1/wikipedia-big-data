@@ -24,22 +24,26 @@ To-do:
 - https://dumps.wikimedia.org/other/geoeditors/readme.html
 
 ## Getting Started
-1. Navigate to desired location
->
->cd docker-hive \
->docker-compose up -d
+1. Navigate to desired folder location
+```
+$ git clone https://github.com/jrubin1/scala-hive.git \\
+$ cd docker-hive \
+$ docker-compose up -d
+$ docker-compose exec hive-server bash
+>curl https://dumps.wikimedia.org/other/geoeditors/geoeditors-monthly-2020-12.tsv —output geoeditors.tsv
+>CREATE TABLE geoeditors (wiki_db string, country string, activity_level string, lower_bound int, upper_bound int) row format delimited fields terminated by ‘\t’ lines terminated by ‘\n’;
+>LOAD DATA LOCAL INPATH '/opt/hive/geoeditors.tsv’ OVERWRITE INTO TABLE geoeditors;
+>CREATE TABLE pageviews (domain_code string, page_title string, count_views int, total_response_size int) row format delimited fields terminated by ‘ ’ lines terminated by ‘\n’;
+>LOAD DATA LOCAL INPATH '/opt/hive/pageviews’ OVERWRITE INTO TABLE pageviews;
+```
 
+## Usage
 
 
 ## Requirements
 - JDK Version 8 or 11
 - Scala and sbt
 - docker-hive (Big Data Europe)
-
-## Setup docker-hive
-- First, clone docker-hive repo locally
->cd docker-hive \
->docker-compose up -d
 
 ## Instructions
 1. Set up docker-hive
