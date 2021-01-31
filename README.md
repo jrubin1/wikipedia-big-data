@@ -1,11 +1,10 @@
 # Wikipedia Big Data Analysis
 ## Technologies
-- Hive
-- JDBC
-- Scala
-- sbt
-- HDFS
-- Yarn
+- Hive - version 2.3.2
+- Hadoop (HDFS, Yarn, MapReduce) - version 3.2.1
+- Hive JDBC - version 3.1.2
+- Scala - version 2.13.4
+- sbt - version 1.4.6
 
 ## Features
 - Wikipedia Analytics Dataset - pageviews and geoeditors data
