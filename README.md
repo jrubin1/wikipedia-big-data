@@ -58,3 +58,5 @@ To-do:
   $ sbt run
 ```
 2. Once prompted, choose to execute desired query or to execute all queries
+
+(./images/image.png)
