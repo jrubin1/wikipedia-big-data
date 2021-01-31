@@ -59,4 +59,4 @@ To-do:
 ```
 2. Once prompted, choose to execute desired query or to execute all queries
 
-![Menu Image](./images/image.png)
+![Menu Image](./images/img.png)
