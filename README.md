@@ -36,8 +36,8 @@ To-do:
   $ docker-compose up -d
   $ docker-compose exec hive-server bash
   # cd hive
-  # curl https://dumps.wikimedia.org/other/geoeditors/geoeditors-monthly-2020-12.tsv —output geoeditors.tsv
-  # curl https://dumps.wikimedia.org/other/pageviews/2020/2020-11/pageviews-20201101-000000.gz —output pageviews.gz
+  # curl https://dumps.wikimedia.org/other/geoeditors/geoeditors-monthly-2020-12.tsv —-output geoeditors.tsv
+  # curl https://dumps.wikimedia.org/other/pageviews/2020/2020-11/pageviews-20201101-000000.gz —-output pageviews.gz
   # gunzip pageviews.gz
   # /opt/hive/bin/beeline -u jdbc:hive2://localhost:10000
   > CREATE TABLE geoeditors (wiki_db string, country string, activity_level string, lower_bound int, upper_bound int) row format delimited fields terminated by ‘\t’ lines terminated by ‘\n’;
