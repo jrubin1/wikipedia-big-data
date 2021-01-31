@@ -7,6 +7,7 @@
 - sbt - version 1.4.6
 
 ## Features
+Current:
 - Wikipedia Analytics Dataset - pageviews and geoeditors data
 - Data processing/analysis using Hive on Wikipedia Pageview data and Geoeditor data
 - Focused analysis on Country (country field)/Language (wiki_db field) of page edits and page views
@@ -14,10 +15,21 @@
 - Queries executed and output by Scala
 - CLI allowing user to either execute select query of choice or execute all queries
 - This project was accompanied by a slidedeck presentation of results as well as a high level over of the process used to achieve those results
+To-do:
+- Performance analysis of partitioning and bucketing including timed execution of queries
+- Expansion to include more Wikipedia Datasets (Clickstream or others)
 
 ## Datasets
 - https://dumps.wikimedia.org/other/pageviews/readme.html
 - https://dumps.wikimedia.org/other/geoeditors/readme.html
+
+## Getting Started
+1. Navigate to desired location
+>
+>cd docker-hive \
+>docker-compose up -d
+
+
 
 ## Requirements
 - JDK Version 8 or 11
