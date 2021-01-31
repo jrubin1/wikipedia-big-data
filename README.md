@@ -42,7 +42,6 @@ To-do:
   # /opt/hive/bin/beeline -u jdbc:hive2://localhost:10000
   > CREATE TABLE geoeditors (wiki_db string, country string, activity_level string, lower_bound int, upper_bound int) row format delimited fields terminated by ‘\t’ lines terminated by ‘\n’;
   > LOAD DATA LOCAL INPATH '/opt/hive/geoeditors.tsv’ OVERWRITE INTO TABLE geoeditors;
-  
   > CREATE TABLE pageviews (domain_code string, page_title string, count_views int, total_response_size int) row format delimited fields terminated by ‘ ’ lines terminated by ‘\n’;
   > LOAD DATA LOCAL INPATH '/opt/hive/pageviews’ OVERWRITE INTO TABLE pageviews;
 ```
