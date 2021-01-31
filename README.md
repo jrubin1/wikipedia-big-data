@@ -24,20 +24,37 @@ To-do:
 - https://dumps.wikimedia.org/other/geoeditors/readme.html
 
 ## Getting Started
-1. Navigate to desired folder location
+1. Navigate to desired folder location to clone docker-hive
+2. Execute the following shell commands
 ```
-$ git clone https://github.com/jrubin1/scala-hive.git \\
-$ cd docker-hive \
-$ docker-compose up -d
-$ docker-compose exec hive-server bash
->curl https://dumps.wikimedia.org/other/geoeditors/geoeditors-monthly-2020-12.tsv —output geoeditors.tsv
->CREATE TABLE geoeditors (wiki_db string, country string, activity_level string, lower_bound int, upper_bound int) row format delimited fields terminated by ‘\t’ lines terminated by ‘\n’;
->LOAD DATA LOCAL INPATH '/opt/hive/geoeditors.tsv’ OVERWRITE INTO TABLE geoeditors;
->CREATE TABLE pageviews (domain_code string, page_title string, count_views int, total_response_size int) row format delimited fields terminated by ‘ ’ lines terminated by ‘\n’;
->LOAD DATA LOCAL INPATH '/opt/hive/pageviews’ OVERWRITE INTO TABLE pageviews;
+  $ git clone https://github.com/jrubin1/scala-hive.git \\
+  $ cd docker-hive \
+  $ docker-compose up -d
+  $ docker-compose exec hive-server bash
+  # cd hive
+  # curl https://dumps.wikimedia.org/other/geoeditors/geoeditors-monthly-2020-12.tsv —output geoeditors.tsv
+  # curl https://dumps.wikimedia.org/other/pageviews/2020/2020-11/pageviews-20201101-000000.gz —output pageviews.gz
+  # gunzip pageviews.gz
+  # /opt/hive/bin/beeline -u jdbc:hive2://localhost:10000
+  > CREATE TABLE geoeditors (wiki_db string, country string, activity_level string, lower_bound int, upper_bound int) row format delimited fields terminated by ‘\t’ lines terminated by ‘\n’;
+  > LOAD DATA LOCAL INPATH '/opt/hive/geoeditors.tsv’ OVERWRITE INTO TABLE geoeditors;
+  
+  > CREATE TABLE pageviews (domain_code string, page_title string, count_views int, total_response_size int) row format delimited fields terminated by ‘ ’ lines terminated by ‘\n’;
+  > LOAD DATA LOCAL INPATH '/opt/hive/pageviews’ OVERWRITE INTO TABLE pageviews;
+```
+3. Navigate to desired folder location to clone wikipedia-big-data
+4. Execute the following shell command
+```
+  $ git clone https://github.com/jrubin1/wikipedia-big-data.git \\
 ```
 
 ## Usage
+1. Execute the following shell commands
+```
+  $ cd wikipedia-big-data
+  $ sbt run
+```
+2. Once prompted, choose to execute desired query or to execute all queries
 
 
 ## Requirements
