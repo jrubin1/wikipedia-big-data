@@ -1,4 +1,7 @@
 # Wikipedia Big Data Analysis
+## Project Description
+This is a Scala application that uses Hive to process and conduct analysis on the Wikipedia Analytics Dataset- including Wikipedia Pageview data and Geoeditor data. 
+
 ## Technologies
 - Hive - version 2.3.2
 - Hadoop (HDFS, Yarn, MapReduce) - version 3.2.1
@@ -15,6 +18,7 @@ Current:
 - Queries executed and output by Scala
 - CLI allowing user to either execute select query of choice or execute all queries
 - This project was accompanied by a slidedeck presentation of results as well as a high level over of the process used to achieve those results
+
 To-do:
 - Performance analysis of partitioning and bucketing including timed execution of queries
 - Expansion to include more Wikipedia Datasets (Clickstream or others)
@@ -27,8 +31,8 @@ To-do:
 1. Navigate to desired folder location to clone docker-hive
 2. Execute the following shell commands
 ```
-  $ git clone https://github.com/jrubin1/scala-hive.git \\
-  $ cd docker-hive \
+  $ git clone https://github.com/jrubin1/scala-hive.git
+  $ cd docker-hive
   $ docker-compose up -d
   $ docker-compose exec hive-server bash
   # cd hive
@@ -45,7 +49,7 @@ To-do:
 3. Navigate to desired folder location to clone wikipedia-big-data
 4. Execute the following shell command
 ```
-  $ git clone https://github.com/jrubin1/wikipedia-big-data.git \\
+  $ git clone https://github.com/jrubin1/wikipedia-big-data.git
 ```
 
 ## Usage
@@ -55,22 +59,3 @@ To-do:
   $ sbt run
 ```
 2. Once prompted, choose to execute desired query or to execute all queries
-
-
-## Requirements
-- JDK Version 8 or 11
-- Scala and sbt
-- docker-hive (Big Data Europe)
-
-## Instructions
-1. Set up docker-hive
-2. Load data into HDFS (can use curl to retrieve data if desired)
-3. Create Hive tables with schema according to pageviews and geoeditors data format
-4. Load data from HDFS into Hive
-5. Run Scala program to execute analysis. On prompt, select desired analysis
-
-## Compile
->sbt compile
-
-## Run
->sbt run
