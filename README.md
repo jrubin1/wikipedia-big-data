@@ -17,7 +17,7 @@ Current:
 - Scala connection to Hive through JDBC
 - Queries executed and output by Scala
 - CLI allowing user to either execute select query of choice or execute all queries
-- This project was accompanied by a slidedeck presentation of results as well as a high level over of the process used to achieve those results
+- This project was accompanied by a slidedeck presentation of results as well as a high level overview of the process used to achieve those results
 
 To-do:
 - Performance analysis of partitioning and bucketing including timed execution of queries
